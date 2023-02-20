@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Helvetica LT';
+    src: local('Helvetica LT Ultra Compressed'), local('Helvetica-LT-Ultra-Compressed'),
+        url('HelveticaLTStd-UltraComp.woff2') format('woff2'),
+        url('HelveticaLTStd-UltraComp.woff') format('woff'),
+        url('HelveticaLTStd-UltraComp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
