@@ -2,15 +2,11 @@
   <div class="hello">
     <q-btn color="secondary" label="Secondary" @click="printConsole"/>
 
-    <div class="q-pa-md q-gutter-md">
-    <div class="row justify-between">
 
-      <p class="advice-font">{{ this.adviseText }}</p>
+    <p class="advice-font">{{ this.adviseText }}</p>
 
     </div>
-  </div>
 
-  </div>
 </template>
 
 <script>
