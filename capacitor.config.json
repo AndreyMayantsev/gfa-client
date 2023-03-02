@@ -1,0 +1,6 @@
+{
+  "appId": "gfaclient.mayantsev.net",
+  "appName": "gfaclient",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

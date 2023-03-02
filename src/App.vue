@@ -69,7 +69,6 @@ export default {
     
       if (response.ok) { 
         advice = await response.json();
-
         this.adviceImage = this.getRandomImage();
       } else {
         advice = "Включи блять интернет!"
@@ -91,16 +90,15 @@ export default {
     },
 
     async viewAdvice() {
-      let _currentAdvice = await this.getAdvice('http://fucking-great-advice.ru/api/random');
+      let _currentAdvice = await this.getAdvice('https://fucking-great-advice.ru/api/random');
       this.setAdviceFont(_currentAdvice['text']);
-      this.currentAdvice = _currentAdvice['text'];
+      this.currentAdvice = _currentAdvice['text'].toUpperCase();
     },
 
     async getAdviceTags() {
       let url = "https://fucking-great-advice.ru/api/v2/tags";
       let categories  = {};
       let response = await fetch(url);
-      //document.body.style.backgroundImage = 'url(' + this.getRandomImage(); + ')';
     
       if (response.ok) { 
         categories = await response.json();
@@ -111,8 +109,8 @@ export default {
     },
 
     isLongWordsContained(advice) {
-        let extraMaxAbc = 10;
-        let maxAbc = 8;
+        let extraMaxAbc = 9;
+        let maxAbc = 7;
         let isLongWordsContainedAdvice = "standart";
         let adviceMass = advice.split(' ');
         
@@ -183,7 +181,7 @@ export default {
 }
 .advice-font {
   font-family: "swiss";
-  font-size: 5.0rem;
+  font-size: 4.8rem;
   line-height: .9;
   letter-spacing: 0;
   text-decoration-style: solid;
@@ -199,7 +197,7 @@ export default {
 }
 .advice-font-extra-small {
   font-family: "swiss";
-  font-size: 3.0rem;
+  font-size: 2.8rem;
   line-height: .9;
   letter-spacing: 0;
   text-decoration-style: solid;
